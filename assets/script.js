@@ -36,3 +36,33 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+function insCard(cardMember){
+//scomposizione delle proprietà dell'array di oggetti
+  const {name, role, email, img} = teamMembers;
+//composizione della card con template literal per ricollegare le proprietà dell'oggetto sulla carta
+  return `"<div class="card-header">
+  <div class="card" style="width: 18rem;">
+    <img src="./assets/${img}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">${name}</p>
+      <p>${role}</p>
+      <p>${email}</p>
+    </div>
+  </div>
+</div>`;
+}
+
+console.log(insCard(cardMember));
+
+function stampCard(memberGroup){
+  for(let key of teamMembers){
+    memberGroup += cardMember
+  }
+
+  return document.querySelector('.row').innerHTML = cardMember;
+}
+
+
+console.log();
