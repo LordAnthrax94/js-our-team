@@ -53,7 +53,28 @@ console.log(cardMember);
 document.querySelector('.colMembers').innerHTML += cardMember;
 }
 
+const form = document.getElementById('form');
 
+form.addEventListener('submit', e =>{
+  e.preventDefault()
+
+  const name = document.getElementById('nameins').value;
+  const role = document.getElementById('roleins').value;
+  const email = document.getElementById('emailins').value;
+  const img = document.getElementById('imgins').value;
+
+  const card = {
+    name,
+    role,
+    email,
+    img
+  }
+
+  teamMembers.push(card);
+
+  console.log(card);
+  
+})
 
 
 
