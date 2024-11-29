@@ -40,7 +40,7 @@ const teamMembers = [
 for(let key of teamMembers){
   const {name, role, email, img} = key ;
   let cardMember = `<div class="card-header">
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 20rem;">
     <img src="./assets/${img}" class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text">${name}</p>
